@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Glance.AppWidget.Background" parent="">
+        <item name="android:id">@android:id/background</item>
+    </style>
+    <style name="Base.Theme.SplashScreen" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:enforceNavigationBarContrast">true</item>
+        <item name="isLightTheme">?android:isLightTheme</item>
+    </style>
+    <style name="Base.Theme.SplashScreen.DayNight" parent="@style/Base.Theme.SplashScreen">
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:enforceNavigationBarContrast">true</item>
+    </style>
+    <style name="DialogWindowTheme">
+        <item name="android:windowClipToOutline">false</item>
+    </style>
+    <style name="EdgeToEdgeFloatingDialogTheme" parent="@android:style/Theme.DeviceDefault.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowElevation">0.0dip</item>
+        <item name="android:windowClipToOutline">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">@integer/m3c_window_layout_in_display_cutout_mode</item>
+    </style>
+    <style name="EdgeToEdgeFloatingDialogWindowTheme">
+        <item name="android:dialogTheme">@style/EdgeToEdgeFloatingDialogTheme</item>
+    </style>
+    <style name="FloatingDialogWindowTheme">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowClipToOutline">false</item>
+    </style>
+    <style name="Glance.AppWidget.Background" parent="@style/Base.Glance.AppWidget.Background">
+        <item name="android:padding">16.0dip</item>
+        <item name="android:clipToOutline">true</item>
+    </style>
+    <style name="Glance.AppWidget.Background.Error" parent="@style/Glance.AppWidget.Background">
+        <item name="android:background">@drawable/glance_error_layout_background</item>
+    </style>
+    <style name="Glance.AppWidget.Box" parent="" />
+    <style name="Glance.AppWidget.Button" parent="" />
+    <style name="Glance.AppWidget.CheckBox" parent="" />
+    <style name="Glance.AppWidget.CheckBoxBackport" parent="" />
+    <style name="Glance.AppWidget.CheckBoxIcon" parent="" />
+    <style name="Glance.AppWidget.CheckBoxText" parent="" />
+    <style name="Glance.AppWidget.CircularProgressIndicator" parent="" />
+    <style name="Glance.AppWidget.Column" parent="" />
+    <style name="Glance.AppWidget.LinearProgressIndicator" parent="@android:style/Widget.Material.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/glance_progress_horizontal</item>
+    </style>
+    <style name="Glance.AppWidget.List" parent="" />
+    <style name="Glance.AppWidget.RadioButton" parent="" />
+    <style name="Glance.AppWidget.RadioButtonIcon" parent="" />
+    <style name="Glance.AppWidget.RadioButtonText" parent="" />
+    <style name="Glance.AppWidget.Row" parent="" />
+    <style name="Glance.AppWidget.Switch" parent="" />
+    <style name="Glance.AppWidget.SwitchBackport" parent="" />
+    <style name="Glance.AppWidget.SwitchText" parent="" />
+    <style name="Glance.AppWidget.SwitchThumb" parent="" />
+    <style name="Glance.AppWidget.SwitchTrack" parent="" />
+    <style name="Glance.AppWidget.Text" parent="">
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="Glance.AppWidget.TextAppearance.DeviceDefaultFontFamily" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textSize">@null</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@null</item>
+        <item name="android:textColorLink">@null</item>
+        <item name="android:shadowColor">@null</item>
+        <item name="android:shadowDx">@null</item>
+        <item name="android:shadowDy">@null</item>
+        <item name="android:shadowRadius">@null</item>
+        <item name="android:elegantTextHeight">@null</item>
+        <item name="android:letterSpacing">@null</item>
+        <item name="android:fontFeatureSettings">@null</item>
+        <item name="android:fontVariationSettings">@null</item>
+    </style>
+    <style name="Glance.AppWidget.TextAppearance.Medium" parent="@style/Glance.AppWidget.TextAppearance.DeviceDefaultFontFamily">
+        <item name="android:textFontWeight">500</item>
+    </style>
+    <style name="Glance.AppWidget.Theme" parent="@android:style/Theme.DeviceDefault.DayNight" />
+    <style name="Glance.AppWidget.Theme.GridChildren" parent="" />
+    <style name="Glance.AppWidget.Theme.ListChildren" parent="" />
+    <style name="Glance.AppWidget.VerticalGrid" parent="" />
+    <style name="Theme.OpenCode" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+    <style name="Theme.OpenCode.ShareSheet" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.InputMethod</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme.OpenCode.Starting" parent="@style/Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Theme.OpenCode</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenBackground">@android:color/black</item>
+    </style>
+    <style name="Theme.OpenCode.SystemDialog" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme.SplashScreen" parent="@style/Base.Theme.SplashScreen.DayNight">
+        <item name="android:windowSplashScreenBackground">?windowSplashScreenBackground</item>
+        <item name="android:windowSplashScreenAnimatedIcon">?windowSplashScreenAnimatedIcon</item>
+        <item name="android:windowSplashScreenAnimationDuration">?windowSplashScreenAnimationDuration</item>
+    </style>
+    <style name="Widget.Glance.AppWidget.CallbackTrampoline" parent="@android:style/Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+    <style name="mc3_dark_scheme">
+        <item name="mc3_background">@android:color/black</item>
+        <item name="mc3_inverse_on_surface">@android:color/black</item>
+        <item name="mc3_inverse_primary">@android:color/black</item>
+        <item name="mc3_inverse_surface">@android:color/black</item>
+        <item name="mc3_on_background">@android:color/black</item>
+        <item name="mc3_on_primary">@android:color/black</item>
+        <item name="mc3_on_primary_container">@android:color/black</item>
+        <item name="mc3_on_primary_fixed">@android:color/black</item>
+        <item name="mc3_on_primary_fixed_variant">@android:color/black</item>
+        <item name="mc3_on_secondary">@android:color/black</item>
+        <item name="mc3_on_secondary_container">@android:color/black</item>
+        <item name="mc3_on_secondary_fixed">@android:color/black</item>
+        <item name="mc3_on_secondary_fixed_variant">@android:color/black</item>
+        <item name="mc3_on_surface">@android:color/black</item>
+        <item name="mc3_on_surface_variant">@android:color/black</item>
+        <item name="mc3_on_tertiary">@android:color/black</item>
+        <item name="mc3_on_tertiary_container">@android:color/black</item>
+        <item name="mc3_on_tertiary_fixed">@android:color/black</item>
+        <item name="mc3_on_tertiary_fixed_variant">@android:color/black</item>
+        <item name="mc3_outline">@android:color/black</item>
+        <item name="mc3_outline_variant">@android:color/black</item>
+        <item name="mc3_primary">@android:color/black</item>
+        <item name="mc3_primary_container">@android:color/black</item>
+        <item name="mc3_primary_fixed">@android:color/black</item>
+        <item name="mc3_primary_fixed_dim">@android:color/black</item>
+        <item name="mc3_secondary">@android:color/black</item>
+        <item name="mc3_secondary_container">@android:color/black</item>
+        <item name="mc3_secondary_fixed">@android:color/black</item>
+        <item name="mc3_secondary_fixed_dim">@android:color/black</item>
+        <item name="mc3_surface">@android:color/black</item>
+        <item name="mc3_surface_bright">@android:color/black</item>
+        <item name="mc3_surface_container">@android:color/black</item>
+        <item name="mc3_surface_container_high">@android:color/black</item>
+        <item name="mc3_surface_container_highest">@android:color/black</item>
+        <item name="mc3_surface_container_low">@android:color/black</item>
+        <item name="mc3_surface_container_lowest">@android:color/black</item>
+        <item name="mc3_surface_dim">@android:color/black</item>
+        <item name="mc3_surface_tint">@android:color/black</item>
+        <item name="mc3_surface_variant">@android:color/black</item>
+        <item name="mc3_tertiary">@android:color/black</item>
+        <item name="mc3_tertiary_container">@android:color/black</item>
+        <item name="mc3_tertiary_fixed">@android:color/black</item>
+        <item name="mc3_tertiary_fixed_dim">@android:color/black</item>
+    </style>
+    <style name="mc3_light_scheme">
+        <item name="mc3_background">@android:color/black</item>
+        <item name="mc3_inverse_on_surface">@android:color/black</item>
+        <item name="mc3_inverse_primary">@android:color/black</item>
+        <item name="mc3_inverse_surface">@android:color/black</item>
+        <item name="mc3_on_background">@android:color/black</item>
+        <item name="mc3_on_primary">@android:color/black</item>
+        <item name="mc3_on_primary_container">@android:color/black</item>
+        <item name="mc3_on_primary_fixed">@android:color/black</item>
+        <item name="mc3_on_primary_fixed_variant">@android:color/black</item>
+        <item name="mc3_on_secondary">@android:color/black</item>
+        <item name="mc3_on_secondary_container">@android:color/black</item>
+        <item name="mc3_on_secondary_fixed">@android:color/black</item>
+        <item name="mc3_on_secondary_fixed_variant">@android:color/black</item>
+        <item name="mc3_on_surface">@android:color/black</item>
+        <item name="mc3_on_surface_variant">@android:color/black</item>
+        <item name="mc3_on_tertiary">@android:color/black</item>
+        <item name="mc3_on_tertiary_container">@android:color/black</item>
+        <item name="mc3_on_tertiary_fixed">@android:color/black</item>
+        <item name="mc3_on_tertiary_fixed_variant">@android:color/black</item>
+        <item name="mc3_outline">@android:color/black</item>
+        <item name="mc3_outline_variant">@android:color/black</item>
+        <item name="mc3_primary">@android:color/black</item>
+        <item name="mc3_primary_container">@android:color/black</item>
+        <item name="mc3_primary_fixed">@android:color/black</item>
+        <item name="mc3_primary_fixed_dim">@android:color/black</item>
+        <item name="mc3_secondary">@android:color/black</item>
+        <item name="mc3_secondary_container">@android:color/black</item>
+        <item name="mc3_secondary_fixed">@android:color/black</item>
+        <item name="mc3_secondary_fixed_dim">@android:color/black</item>
+        <item name="mc3_surface">@android:color/black</item>
+        <item name="mc3_surface_bright">@android:color/black</item>
+        <item name="mc3_surface_container">@android:color/black</item>
+        <item name="mc3_surface_container_high">@android:color/black</item>
+        <item name="mc3_surface_container_highest">@android:color/black</item>
+        <item name="mc3_surface_container_low">@android:color/black</item>
+        <item name="mc3_surface_container_lowest">@android:color/black</item>
+        <item name="mc3_surface_dim">@android:color/black</item>
+        <item name="mc3_surface_tint">@android:color/black</item>
+        <item name="mc3_surface_variant">@android:color/black</item>
+        <item name="mc3_tertiary">@android:color/black</item>
+        <item name="mc3_tertiary_container">@android:color/black</item>
+        <item name="mc3_tertiary_fixed">@android:color/black</item>
+        <item name="mc3_tertiary_fixed_dim">@android:color/black</item>
+    </style>
+    <style name="mc3_palette">
+        <item name="mc3_neutral_0">@android:color/system_neutral1_1000</item>
+        <item name="mc3_neutral_10">@android:color/system_neutral1_900</item>
+        <item name="mc3_neutral_100">@android:color/system_neutral1_0</item>
+        <item name="mc3_neutral_20">@android:color/system_neutral1_800</item>
+        <item name="mc3_neutral_30">@android:color/system_neutral1_700</item>
+        <item name="mc3_neutral_40">@android:color/system_neutral1_600</item>
+        <item name="mc3_neutral_50">@android:color/system_neutral1_500</item>
+        <item name="mc3_neutral_60">@android:color/system_neutral1_400</item>
+        <item name="mc3_neutral_70">@android:color/system_neutral1_300</item>
+        <item name="mc3_neutral_80">@android:color/system_neutral1_200</item>
+        <item name="mc3_neutral_90">@android:color/system_neutral1_100</item>
+        <item name="mc3_neutral_95">@android:color/system_neutral1_50</item>
+        <item name="mc3_neutral_99">@android:color/system_neutral1_10</item>
+        <item name="mc3_neutral_variant_0">@android:color/system_neutral2_1000</item>
+        <item name="mc3_neutral_variant_10">@android:color/system_neutral2_900</item>
+        <item name="mc3_neutral_variant_100">@android:color/system_neutral2_0</item>
+        <item name="mc3_neutral_variant_20">@android:color/system_neutral2_800</item>
+        <item name="mc3_neutral_variant_30">@android:color/system_neutral2_700</item>
+        <item name="mc3_neutral_variant_40">@android:color/system_neutral2_600</item>
+        <item name="mc3_neutral_variant_50">@android:color/system_neutral2_500</item>
+        <item name="mc3_neutral_variant_60">@android:color/system_neutral2_400</item>
+        <item name="mc3_neutral_variant_70">@android:color/system_neutral2_300</item>
+        <item name="mc3_neutral_variant_80">@android:color/system_neutral2_200</item>
+        <item name="mc3_neutral_variant_90">@android:color/system_neutral2_100</item>
+        <item name="mc3_neutral_variant_95">@android:color/system_neutral2_50</item>
+        <item name="mc3_neutral_variant_99">@android:color/system_neutral2_10</item>
+        <item name="mc3_primary_0">@android:color/system_accent1_1000</item>
+        <item name="mc3_primary_10">@android:color/system_accent1_900</item>
+        <item name="mc3_primary_100">@android:color/system_accent1_0</item>
+        <item name="mc3_primary_20">@android:color/system_accent1_800</item>
+        <item name="mc3_primary_30">@android:color/system_accent1_700</item>
+        <item name="mc3_primary_40">@android:color/system_accent1_600</item>
+        <item name="mc3_primary_50">@android:color/system_accent1_500</item>
+        <item name="mc3_primary_60">@android:color/system_accent1_400</item>
+        <item name="mc3_primary_70">@android:color/system_accent1_300</item>
+        <item name="mc3_primary_80">@android:color/system_accent1_200</item>
+        <item name="mc3_primary_90">@android:color/system_accent1_100</item>
+        <item name="mc3_primary_95">@android:color/system_accent1_50</item>
+        <item name="mc3_primary_99">@android:color/system_accent1_10</item>
+        <item name="mc3_secondary_0">@android:color/system_accent2_1000</item>
+        <item name="mc3_secondary_10">@android:color/system_accent2_900</item>
+        <item name="mc3_secondary_100">@android:color/system_accent2_0</item>
+        <item name="mc3_secondary_20">@android:color/system_accent2_800</item>
+        <item name="mc3_secondary_30">@android:color/system_accent2_700</item>
+        <item name="mc3_secondary_40">@android:color/system_accent2_600</item>
+        <item name="mc3_secondary_50">@android:color/system_accent2_500</item>
+        <item name="mc3_secondary_60">@android:color/system_accent2_400</item>
+        <item name="mc3_secondary_70">@android:color/system_accent2_300</item>
+        <item name="mc3_secondary_80">@android:color/system_accent2_200</item>
+        <item name="mc3_secondary_90">@android:color/system_accent2_100</item>
+        <item name="mc3_secondary_95">@android:color/system_accent2_50</item>
+        <item name="mc3_secondary_99">@android:color/system_accent2_10</item>
+        <item name="mc3_tertiary_0">@android:color/system_accent3_1000</item>
+        <item name="mc3_tertiary_10">@android:color/system_accent3_900</item>
+        <item name="mc3_tertiary_100">@android:color/system_accent3_0</item>
+        <item name="mc3_tertiary_20">@android:color/system_accent3_800</item>
+        <item name="mc3_tertiary_30">@android:color/system_accent3_700</item>
+        <item name="mc3_tertiary_40">@android:color/system_accent3_600</item>
+        <item name="mc3_tertiary_50">@android:color/system_accent3_500</item>
+        <item name="mc3_tertiary_60">@android:color/system_accent3_400</item>
+        <item name="mc3_tertiary_70">@android:color/system_accent3_300</item>
+        <item name="mc3_tertiary_80">@android:color/system_accent3_200</item>
+        <item name="mc3_tertiary_90">@android:color/system_accent3_100</item>
+        <item name="mc3_tertiary_95">@android:color/system_accent3_50</item>
+        <item name="mc3_tertiary_99">@android:color/system_accent3_10</item>
+    </style>
+</resources>

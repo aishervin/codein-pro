@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/ms_edit_square" android:enabled="true" android:shortcutId="new-session" android:shortcutShortLabel="@string/system_new_session" android:shortcutLongLabel="@string/system_new_session">
+        <intent android:targetPackage="ai.opencode.mobilecode" android:action="ai.opencode.mobilecode.SYSTEM_ACTION" android:targetClass="ai.opencode.feature.system.intents.SystemActionActivity">
+            <extra android:name="quickAction" android:value="ai.opencode.mobilecode.new-session" />
+        </intent>
+    </shortcut>
+    <capability android:name="actions.intent.CREATE_MESSAGE">
+        <intent android:targetPackage="ai.opencode.mobilecode" android:targetClass="ai.opencode.feature.system.intents.AskOpenCodeActivity">
+            <parameter android:name="message.text" android:key="android.intent.extra.TEXT" />
+        </intent>
+    </capability>
+    <capability android:name="actions.intent.OPEN_APP_FEATURE">
+        <intent android:targetPackage="ai.opencode.mobilecode" android:action="ai.opencode.mobilecode.SYSTEM_ACTION" android:targetClass="ai.opencode.feature.system.intents.AppActionActivity">
+            <parameter android:name="feature" android:key="appFeature" />
+        </intent>
+    </capability>
+    <share-target android:targetClass="ai.opencode.feature.system.share.ShareActivity">
+        <data android:mimeType="text/*" />
+        <data android:mimeType="image/*" />
+        <data android:mimeType="video/*" />
+        <data android:mimeType="audio/*" />
+        <data android:mimeType="application/*" />
+        <category android:name="ai.opencode.mobilecode.category.SHARE_SESSION" />
+    </share-target>
+</shortcuts>

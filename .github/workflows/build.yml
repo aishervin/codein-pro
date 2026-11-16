@@ -1,0 +1,104 @@
+name: Build APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Locate build-tools
+        id: sdk
+        run: |
+          SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          BT="$(ls -d "$SDK"/build-tools/* 2>/dev/null | sort -V | tail -1)"
+          if [ -z "$BT" ]; then echo "no build-tools found" >&2; exit 1; fi
+          echo "bt=$BT" >> "$GITHUB_OUTPUT"
+          "$BT/aapt2" version
+
+      - name: Fetch apktool
+        run: |
+          curl -fsSL -o apktool.jar \
+            https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar
+          echo "apktool downloaded"
+
+      - name: Build unsigned APK
+        run: |
+          java -jar apktool.jar b src -o unsigned.apk \
+            --aapt "${{ steps.sdk.outputs.bt }}/aapt2"
+
+      - name: Align
+        run: |
+          BT="${{ steps.sdk.outputs.bt }}"
+          "$BT/zipalign" -p -f 4 unsigned.apk aligned.apk
+          "$BT/zipalign" -c -p 4 aligned.apk
+
+      - name: Prepare keystore
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > release.jks
+            echo "using repo signing key"
+          else
+            keytool -genkeypair -keystore release.jks -storepass codeinpro \
+              -keypass codeinpro -alias codeinpro -keyalg RSA -keysize 4096 \
+              -validity 10000 -dname "CN=CODXiN Pro, O=SHEN, C=IR"
+            echo "using throwaway key"
+            echo "KEYSTORE_PASSWORD=codeinpro" >> "$GITHUB_ENV"
+            echo "KEY_ALIAS=codeinpro" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=codeinpro" >> "$GITHUB_ENV"
+          fi
+
+      - name: Sign
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          BT="${{ steps.sdk.outputs.bt }}"
+          "$BT/apksigner" sign --ks release.jks \
+            --ks-pass "pass:${KEYSTORE_PASSWORD:-codeinpro}" \
+            --ks-key-alias "${KEY_ALIAS:-codeinpro}" \
+            --key-pass "pass:${KEY_PASSWORD:-codeinpro}" \
+            --v1-signing-enabled true --v2-signing-enabled true --v3-signing-enabled true \
+            --out app-release.apk aligned.apk
+          "$BT/apksigner" verify --verbose app-release.apk
+
+      - name: Inspect result
+        run: |
+          BT="${{ steps.sdk.outputs.bt }}"
+          echo "== base =="; "$BT/aapt2" dump badging base.apk | head -12
+          echo "== built =="; "$BT/aapt2" dump badging app-release.apk | head -12
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: codein-pro-apk
+          path: app-release.apk
+          if-no-files-found: error
+
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" app-release.apk \
+            --title "$GITHUB_REF_NAME" --generate-notes

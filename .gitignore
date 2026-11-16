@@ -1,0 +1,6 @@
+*.apk
+!base.apk
+*.jks
+*.idsig
+apktool.jar
+fresh/
