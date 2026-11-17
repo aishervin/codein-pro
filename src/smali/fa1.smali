@@ -1,0 +1,14 @@
+.class public interface abstract Lfa1;
+.super Ljava/lang/Object;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+
+# virtual methods
+.method public abstract a(IILb41;)Lra1;
+.end method
+
+.method public abstract b(I)V
+.end method
+
+.method public abstract c(Ljava/util/List;ILs22;IIILd82;)Ljava/lang/Object;
+.end method
