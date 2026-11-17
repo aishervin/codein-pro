@@ -24,6 +24,7 @@ scripts/reprepare.sh ← دیکامپایل مجدد از base.apk + اعمال 
 
 1. دو ریسورس با نام `$glance_switch_thumb_*__0` که aapt2 رد می‌کند → تغییر نام فایل و ورودی‌های `public.xml`.
 2. اتریبیوت `glance_isTopLevelLayout` که در `attrs.xml` وجود ندارد ولی در لِی‌اوت‌ها استفاده شده → تعریف مجدد.
+3. حذف `android:requiredSplitTypes` و `android:splitTypes` از مانیفست. aapt2 در بیلد دوباره `android:isSplitRequired="true"` تزریق می‌کند و اینستالر اندروید APK تک‌فایلی را با پیام «سازگار نیست» رد می‌کند.
 
 در درخت فعلی `src/` هر دو مورد از قبل اعمال شده‌اند؛ دست نزن.
 
@@ -56,7 +57,7 @@ apksigner sign --ks release.jks --out app-release.apk aligned.apk
 
 - [x] دیکامپایل و بیلد دورِ کامل
 - [x] ریبرند: نام، آیکون، لوگو، RTL
-- [ ] رفع خطای نصب نسخه‌ی بازسازی‌شده
+- [x] رفع خطای نصب نسخه‌ی بازسازی‌شده (`isSplitRequired`)
 - [ ] اینتر = خط جدید در پلیسهولدر
 - [ ] اتصال مستقیم به پروایدرهای دیگر
 - [ ] ترمینال محلی بدون سرور

@@ -18,7 +18,12 @@ sed -i 's/\$glance_switch_thumb_off_to_on__0/glance_switch_thumb_off_to_on__0/g;
         s/\$glance_switch_thumb_on_to_off__0/glance_switch_thumb_on_to_off__0/g' \
   res/values/public.xml res/drawable/glance_switch_thumb_*.xml
 
-# 2) attribute used by Glance layouts is missing from attrs.xml after decode
+# 2) aapt2 re-adds android:isSplitRequired="true" when requiredSplitTypes is present,
+#    and the installer then rejects the single APK ("not compatible with your phone")
+sed -i 's| android:requiredSplitTypes="base__abi,base__density" android:splitTypes=""||' \
+  AndroidManifest.xml
+
+# 3) attribute used by Glance layouts is missing from attrs.xml after decode
 if ! grep -q 'name="glance_isTopLevelLayout"' res/values/attrs.xml; then
   sed -i 's|<resources>|<resources>\n    <attr name="glance_isTopLevelLayout" format="boolean" />|' \
     res/values/attrs.xml
