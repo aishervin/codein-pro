@@ -1,0 +1,144 @@
+.class public final Lelc;
+.super Ljava/lang/Object;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+# interfaces
+.implements Ldi5;
+
+
+# static fields
+.field public static final a:Lelc;
+
+.field public static final b:Lg85;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 1
+    new-instance v0, Lelc;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    sput-object v0, Lelc;->a:Lelc;
+
+    .line 7
+    .line 8
+    const-string v0, "kotlin.UInt"
+
+    .line 9
+    .line 10
+    sget-object v1, Lnb5;->a:Lnb5;
+
+    .line 11
+    .line 12
+    invoke-static {v1, v0}, Lo30;->p(Ldi5;Ljava/lang/String;)Lg85;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    sput-object v0, Lelc;->b:Lg85;
+
+    .line 17
+    .line 18
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lgf2;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    sget-object p0, Lelc;->b:Lg85;
+
+    .line 2
+    .line 3
+    invoke-interface {p1, p0}, Lgf2;->q(Lgv9;)Lgf2;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    invoke-interface {p0}, Lgf2;->o()I
+
+    .line 8
+    .line 9
+    .line 10
+    move-result p0
+
+    .line 11
+    new-instance p1, Lalc;
+
+    .line 12
+    .line 13
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    .line 14
+    .line 15
+    .line 16
+    iput p0, p1, Lalc;->X:I
+
+    .line 17
+    .line 18
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    .line 19
+    .line 20
+    .line 21
+    return-object p1
+.end method
+
+.method public final d(Lyi3;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    check-cast p2, Lalc;
+
+    .line 2
+    .line 3
+    iget p0, p2, Lalc;->X:I
+
+    .line 4
+    .line 5
+    sget-object p2, Lelc;->b:Lg85;
+
+    .line 6
+    .line 7
+    invoke-interface {p1, p2}, Lyi3;->l(Lgv9;)Lyi3;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p1
+
+    .line 11
+    invoke-interface {p1, p0}, Lyi3;->x(I)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public final e()Lgv9;
+    .locals 0
+
+    .line 1
+    sget-object p0, Lelc;->b:Lg85;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
