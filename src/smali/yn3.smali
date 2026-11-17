@@ -1,0 +1,225 @@
+.class public final synthetic Lyn3;
+.super Ljava/lang/Object;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+# interfaces
+.implements Lsx5;
+
+
+# instance fields
+.field public final synthetic X:B
+
+.field public synthetic Y:Ljf8;
+
+
+# direct methods
+.method public synthetic constructor <init>(B)V
+    .locals 0
+
+    .line 1
+    iput-byte p1, p0, Lyn3;->X:B
+
+    .line 2
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 1
+    iget-byte v0, p0, Lyn3;->X:B
+
+    .line 2
+    .line 3
+    iget-object p0, p0, Lyn3;->Y:Ljf8;
+
+    .line 4
+    .line 5
+    check-cast p1, Lzf8;
+
+    .line 6
+    .line 7
+    packed-switch v0, :pswitch_data_0
+
+    .line 8
+    .line 9
+    .line 10
+    iget-object p0, p0, Ljf8;->i:Lo4c;
+
+    .line 11
+    .line 12
+    iget-object p0, p0, Lo4c;->e0:Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    check-cast p0, Lu4c;
+
+    .line 15
+    .line 16
+    invoke-interface {p1, p0}, Lzf8;->o(Lu4c;)V
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+
+    .line 20
+    :pswitch_0
+    iget-object p0, p0, Ljf8;->f:Lun3;
+
+    .line 21
+    .line 22
+    invoke-interface {p1, p0}, Lzf8;->s(Lun3;)V
+
+    .line 23
+    .line 24
+    .line 25
+    return-void
+
+    .line 26
+    :pswitch_1
+    iget-object p0, p0, Ljf8;->f:Lun3;
+
+    .line 27
+    .line 28
+    invoke-interface {p1, p0}, Lzf8;->r(Lun3;)V
+
+    .line 29
+    .line 30
+    .line 31
+    return-void
+
+    .line 32
+    :pswitch_2
+    iget-object p0, p0, Ljf8;->o:Lkf8;
+
+    .line 33
+    .line 34
+    invoke-interface {p1, p0}, Lzf8;->x(Lkf8;)V
+
+    .line 35
+    .line 36
+    .line 37
+    return-void
+
+    .line 38
+    :pswitch_3
+    invoke-virtual {p0}, Ljf8;->l()Z
+
+    .line 39
+    .line 40
+    .line 41
+    move-result p0
+
+    .line 42
+    invoke-interface {p1, p0}, Lzf8;->C(Z)V
+
+    .line 43
+    .line 44
+    .line 45
+    return-void
+
+    .line 46
+    :pswitch_4
+    iget p0, p0, Ljf8;->n:I
+
+    .line 47
+    .line 48
+    invoke-interface {p1, p0}, Lzf8;->b(I)V
+
+    .line 49
+    .line 50
+    .line 51
+    return-void
+
+    .line 52
+    :pswitch_5
+    iget-boolean v0, p0, Ljf8;->l:Z
+
+    .line 53
+    .line 54
+    iget p0, p0, Ljf8;->m:I
+
+    .line 55
+    .line 56
+    invoke-interface {p1, p0, v0}, Lzf8;->g(IZ)V
+
+    .line 57
+    .line 58
+    .line 59
+    return-void
+
+    .line 60
+    :pswitch_6
+    iget p0, p0, Ljf8;->e:I
+
+    .line 61
+    .line 62
+    invoke-interface {p1, p0}, Lzf8;->k(I)V
+
+    .line 63
+    .line 64
+    .line 65
+    return-void
+
+    .line 66
+    :pswitch_7
+    iget-boolean v0, p0, Ljf8;->l:Z
+
+    .line 67
+    .line 68
+    iget p0, p0, Ljf8;->e:I
+
+    .line 69
+    .line 70
+    invoke-interface {p1, p0, v0}, Lzf8;->w(IZ)V
+
+    .line 71
+    .line 72
+    .line 73
+    return-void
+
+    .line 74
+    :pswitch_8
+    iget-boolean v0, p0, Ljf8;->g:Z
+
+    .line 75
+    .line 76
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 77
+    .line 78
+    .line 79
+    iget-boolean p0, p0, Ljf8;->g:Z
+
+    .line 80
+    .line 81
+    invoke-interface {p1, p0}, Lzf8;->e(Z)V
+
+    .line 82
+    .line 83
+    .line 84
+    return-void
+
+    .line 85
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
