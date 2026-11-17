@@ -1,0 +1,128 @@
+.class public final synthetic Lwm0;
+.super Ljava/lang/Object;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+# interfaces
+.implements Lk84;
+
+
+# instance fields
+.field public synthetic X:Lws;
+
+.field public synthetic Y:Lxx6;
+
+.field public synthetic Z:Lvxb;
+
+.field public synthetic d0:Lw74;
+
+.field public synthetic e0:I
+
+.field public synthetic f0:Z
+
+.field public synthetic g0:I
+
+.field public synthetic h0:Z
+
+.field public synthetic i0:Ljava/util/Map;
+
+.field public synthetic j0:I
+
+.field public synthetic k0:I
+
+
+# virtual methods
+.method public final o(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
+
+    .line 1
+    iget-object v0, p0, Lwm0;->X:Lws;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lwm0;->Y:Lxx6;
+
+    .line 4
+    .line 5
+    iget-object v2, p0, Lwm0;->Z:Lvxb;
+
+    .line 6
+    .line 7
+    iget-object v3, p0, Lwm0;->d0:Lw74;
+
+    .line 8
+    .line 9
+    iget v4, p0, Lwm0;->e0:I
+
+    .line 10
+    .line 11
+    iget-boolean v5, p0, Lwm0;->f0:Z
+
+    .line 12
+    .line 13
+    iget v6, p0, Lwm0;->g0:I
+
+    .line 14
+    .line 15
+    iget-boolean v7, p0, Lwm0;->h0:Z
+
+    .line 16
+    .line 17
+    iget-object v8, p0, Lwm0;->i0:Ljava/util/Map;
+
+    .line 18
+    .line 19
+    iget v9, p0, Lwm0;->j0:I
+
+    .line 20
+    .line 21
+    iget p0, p0, Lwm0;->k0:I
+
+    .line 22
+    .line 23
+    check-cast p1, Lo94;
+
+    .line 24
+    .line 25
+    check-cast p2, Ljava/lang/Integer;
+
+    .line 26
+    .line 27
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 28
+    .line 29
+    .line 30
+    or-int/lit8 p2, v9, 0x1
+
+    .line 31
+    .line 32
+    invoke-static {p2}, Leea;->c0(I)I
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v10
+
+    .line 36
+    invoke-static {p0}, Leea;->c0(I)I
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v11
+
+    .line 40
+    move-object v9, p1
+
+    .line 41
+    invoke-static/range {v0 .. v11}, Ltda;->a(Lws;Lxx6;Lvxb;Lw74;IZIILjava/util/Map;Lo94;II)V
+
+    .line 42
+    .line 43
+    .line 44
+    sget-object p0, Lvmc;->a:Lvmc;
+
+    .line 45
+    .line 46
+    return-object p0
+.end method
