@@ -4,65 +4,32 @@
 
 <p align="center"><img src="src/res/drawable-nodpi/shen_logo.png" width="96" alt="SHΞN" /></p>
 
-نسخه‌ی کاستوم اندروید از اپ OpenCode Mobile با هویت بصری <bdi>CODΞiN™</bdi> / <bdi>SHΞN™</bdi>.
-این ریپو روی APK رسمی (`ai.opencode.mobilecode` ۰.۷.۰) ساخته شده و به روش **apktool** (smali + resources) بیلد می‌شود.
+CODΞiN Pro is an independent client for the public OpenCode Server HTTP API. It does **not** modify, patch, or bypass the official Android app or its Play licensing. The installable web client lives in `client/` and talks directly to an OpenCode server instance you control.
 
-> نسخه‌ی گریدلی قبلی این ایده در [aishervin/codein](https://github.com/aishervin/codein) است؛ این ریپو ادامه‌ی همان برند روی پایه‌ی اپ رسمی است.
+## OpenCode Server client
 
-## ساختار
+The PWA is a lightweight, installable interface for Android and desktop browsers. It supports server connection, optional HTTP Basic password, health/version check, session listing/creation, message history, and sending prompts.
 
-```
-base.apk            ← APK مرجع (فقط برای مقایسه و دیکامپایل مجدد)
-src/                ← درخت دیکامپایل‌شده: AndroidManifest.xml، res/، smali/، assets/
-scripts/reprepare.sh ← دیکامپایل مجدد از base.apk + اعمال پچ‌های لازم برای aapt2
-.github/workflows/build.yml ← بیلد، zipalign، امضا، artifact و ریلیز تگ
-```
+### Run
 
-## پچ‌های لازم (مهم)
+1. Start OpenCode Server on a machine you control, for example: `opencode serve --hostname 0.0.0.0 --port 4096`.
+2. Publish `client/` with any static HTTPS host (GitHub Pages is supported by the workflow below), or serve it locally.
+3. Open the client, enter the server base URL (for example `http://127.0.0.1:4096` when the browser and server share the same device), and connect.
 
-دیکامپایل خام این APK با aapt2 بیلد نمی‌شود. `scripts/reprepare.sh` این دو مورد را خودکار اعمال می‌کند:
+For remote access, use a private VPN or HTTPS reverse proxy. Do not expose an unauthenticated OpenCode server to the public internet. Configure the server's CORS allowlist for the exact client origin if the client is hosted on a different origin. If the server is configured with a password, enter it in the password field. Credentials are stored in that browser's local storage; avoid shared devices.
 
-1. دو ریسورس با نام `$glance_switch_thumb_*__0` که aapt2 رد می‌کند → تغییر نام فایل و ورودی‌های `public.xml`.
-2. اتریبیوت `glance_isTopLevelLayout` که در `attrs.xml` وجود ندارد ولی در لِی‌اوت‌ها استفاده شده → تعریف مجدد.
-3. حذف `android:requiredSplitTypes` و `android:splitTypes` از مانیفست. aapt2 در بیلد دوباره `android:isSplitRequired="true"` تزریق می‌کند و اینستالر اندروید APK تک‌فایلی را با پیام «سازگار نیست» رد می‌کند.
+### API compatibility
 
-در درخت فعلی `src/` هر دو مورد از قبل اعمال شده‌اند؛ دست نزن.
+The client uses the documented OpenCode Server endpoints: `GET /global/health`, `GET/POST /session`, `GET /session/:id`, and `GET/POST /session/:id/message`. It does not claim compatibility with undocumented endpoints. OpenCode's API can evolve; verify against the server's `/doc` OpenAPI document when upgrading.
 
-## بیلد
+## Android APK status
 
-GitHub Actions → workflow **Build APK** → `Run workflow`.
-خروجی به‌صورت artifact با نام `codein-pro-apk` و در صورت تگ `v*` به‌صورت ریلیز منتشر می‌شود.
+The legacy `src/` and `base.apk` are a decompiled 0.7.0 Android distribution and are retained as historical reference only. They are not used by the independent PWA client. A native Android APK with a distinct package ID requires a source-based Android project; this repository does not currently contain that Gradle/Kotlin source. The PWA can be installed from the browser as an app.
 
-بیلد لوکال (اختیاری، ترموکس):
+## Deploy client
 
-```bash
-java -jar apktool.jar b src -o unsigned.apk --aapt "$(command -v aapt2)"
-zipalign -p -f 4 unsigned.apk aligned.apk
-apksigner sign --ks release.jks --out app-release.apk aligned.apk
-```
+Enable GitHub Pages with **GitHub Actions** as the source. The workflow `.github/workflows/pages.yml` publishes `client/` on pushes to `main`.
 
-## امضا
+## License and attribution
 
-پیش‌فرض: کلید موقت خودکار در هر بیلد (فقط برای تست).
-برای ریلیز پایدار این سکرت‌ها را در ریپو تنظیم کن:
-
-| Secret | توضیح |
-| --- | --- |
-| `KEYSTORE_BASE64` | فایل JKS با `base64 -w0` |
-| `KEYSTORE_PASSWORD` | رمز کی‌استور |
-| `KEY_ALIAS` | alias کلید |
-| `KEY_PASSWORD` | رمز کلید |
-
-## وضعیت
-
-- [x] دیکامپایل و بیلد دورِ کامل
-- [x] ریبرند: نام، آیکون، لوگو، RTL
-- [x] رفع خطای نصب نسخه‌ی بازسازی‌شده (`isSplitRequired`)
-- [ ] اینتر = خط جدید در پلیسهولدر
-- [ ] اتصال مستقیم به پروایدرهای دیگر
-- [ ] ترمینال محلی بدون سرور
-- [ ] چند کلید/اکانت هم‌زمان
-
-## مجوز و اعتبار
-
-کد اصلی متعلق به OpenCode است. هویت بصری و برند متعلق به SHΞN™ / [aishervin](https://github.com/aishervin).
+OpenCode is a separate upstream project. This client is an independent implementation of its public HTTP API. Respect the upstream project's license and trademarks. CODΞiN / SHΞN branding belongs to its respective owner.
