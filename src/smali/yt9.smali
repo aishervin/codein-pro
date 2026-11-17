@@ -1,0 +1,91 @@
+.class public final synthetic Lyt9;
+.super Lw84;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+# interfaces
+.implements Lk84;
+
+
+# static fields
+.field public static final h0:Lyt9;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    .line 1
+    new-instance v0, Lyt9;
+
+    .line 2
+    .line 3
+    const-string v4, "createSegment(JLkotlinx/coroutines/sync/SemaphoreSegment;)Lkotlinx/coroutines/sync/SemaphoreSegment;"
+
+    .line 4
+    .line 5
+    const/4 v5, 0x1
+
+    .line 6
+    const/4 v1, 0x2
+
+    .line 7
+    const-class v2, Lbu9;
+
+    .line 8
+    .line 9
+    const-string v3, "createSegment"
+
+    .line 10
+    .line 11
+    invoke-direct/range {v0 .. v5}, Lw84;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 12
+    .line 13
+    .line 14
+    sput-object v0, Lyt9;->h0:Lyt9;
+
+    .line 15
+    .line 16
+    return-void
+.end method
+
+
+# virtual methods
+.method public final o(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    check-cast p1, Ljava/lang/Number;
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-wide p0
+
+    .line 7
+    check-cast p2, Lcu9;
+
+    .line 8
+    .line 9
+    sget v0, Lbu9;->a:I
+
+    .line 10
+    .line 11
+    new-instance v0, Lcu9;
+
+    .line 12
+    .line 13
+    const/4 v1, 0x0
+
+    .line 14
+    invoke-direct {v0, p0, p1, p2, v1}, Lcu9;-><init>(JLcu9;I)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
+.end method
