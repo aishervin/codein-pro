@@ -1,0 +1,206 @@
+.class public final Lilc;
+.super Ldm8;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+
+# static fields
+.field public static final c:Lilc;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 1
+    new-instance v0, Lilc;
+
+    .line 2
+    .line 3
+    sget-object v1, Ljlc;->a:Ljlc;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1}, Ldm8;-><init>(Ldi5;)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, Lilc;->c:Lilc;
+
+    .line 9
+    .line 10
+    return-void
+.end method
+
+
+# virtual methods
+.method public final i(Ljava/lang/Object;)I
+    .locals 0
+
+    .line 1
+    check-cast p1, Lglc;
+
+    .line 2
+    .line 3
+    iget-object p0, p1, Lglc;->X:[J
+
+    .line 4
+    .line 5
+    array-length p0, p0
+
+    .line 6
+    return p0
+.end method
+
+.method public final k(Lf12;ILjava/lang/Object;)V
+    .locals 2
+
+    .line 1
+    check-cast p3, Lhlc;
+
+    .line 2
+    .line 3
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object p0, p0, Ldm8;->b:Lcm8;
+
+    .line 7
+    .line 8
+    invoke-interface {p1, p0, p2}, Lf12;->f(Lcm8;I)Lgf2;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object p0
+
+    .line 12
+    invoke-interface {p0}, Lgf2;->v()J
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-wide p0
+
+    .line 16
+    invoke-static {p3}, Lbm8;->c(Lbm8;)V
+
+    .line 17
+    .line 18
+    .line 19
+    iget-object p2, p3, Lhlc;->a:[J
+
+    .line 20
+    .line 21
+    iget v0, p3, Lhlc;->b:I
+
+    .line 22
+    .line 23
+    add-int/lit8 v1, v0, 0x1
+
+    .line 24
+    .line 25
+    iput v1, p3, Lhlc;->b:I
+
+    .line 26
+    .line 27
+    aput-wide p0, p2, v0
+
+    .line 28
+    .line 29
+    return-void
+.end method
+
+.method public final n()Lbm8;
+    .locals 1
+
+    .line 1
+    new-instance p0, Lhlc;
+
+    .line 2
+    .line 3
+    const/16 v0, 0xa
+
+    .line 4
+    .line 5
+    new-array v0, v0, [J
+
+    .line 6
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    .line 9
+    .line 10
+    iput-object v0, p0, Lhlc;->a:[J
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    iput v0, p0, Lhlc;->b:I
+
+    .line 14
+    .line 15
+    return-object p0
+.end method
+
+.method public final o(Lg12;Ljava/lang/Object;I)V
+    .locals 4
+
+    .line 1
+    check-cast p2, Lglc;
+
+    .line 2
+    .line 3
+    iget-object p2, p2, Lglc;->X:[J
+
+    .line 4
+    .line 5
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 6
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    :goto_0
+    if-ge v0, p3, :cond_0
+
+    .line 10
+    .line 11
+    iget-object v1, p0, Ldm8;->b:Lcm8;
+
+    .line 12
+    .line 13
+    invoke-interface {p1, v1, v0}, Lg12;->B(Lcm8;I)Lyi3;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
+    aget-wide v2, p2, v0
+
+    .line 18
+    .line 19
+    invoke-interface {v1, v2, v3}, Lyi3;->z(J)V
+
+    .line 20
+    .line 21
+    .line 22
+    add-int/lit8 v0, v0, 0x1
+
+    .line 23
+    .line 24
+    goto :goto_0
+
+    .line 25
+    :cond_0
+    return-void
+.end method
