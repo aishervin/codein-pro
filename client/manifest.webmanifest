@@ -1,0 +1,10 @@
+{
+  "name": "CODΞiN Pro",
+  "short_name": "CODΞiN",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#101113",
+  "theme_color": "#101113",
+  "description": "Independent OpenCode server client",
+  "icons": []
+}
