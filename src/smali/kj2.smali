@@ -1,0 +1,775 @@
+.class public final Lkj2;
+.super Ln4c;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+
+# static fields
+.field public static final F:Lkj2;
+
+
+# instance fields
+.field public A:Z
+
+.field public B:Z
+
+.field public C:Z
+
+.field public D:Landroid/util/SparseArray;
+
+.field public E:Landroid/util/SparseBooleanArray;
+
+.field public w:Z
+
+.field public x:Z
+
+.field public y:Z
+
+.field public z:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
+
+    .line 1
+    new-instance v0, Ljj2;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Lm4c;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    new-instance v1, Landroid/util/SparseArray;
+
+    .line 7
+    .line 8
+    invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
+
+    .line 9
+    .line 10
+    .line 11
+    iput-object v1, v0, Ljj2;->D:Landroid/util/SparseArray;
+
+    .line 12
+    .line 13
+    new-instance v1, Landroid/util/SparseBooleanArray;
+
+    .line 14
+    .line 15
+    invoke-direct {v1}, Landroid/util/SparseBooleanArray;-><init>()V
+
+    .line 16
+    .line 17
+    .line 18
+    iput-object v1, v0, Ljj2;->E:Landroid/util/SparseBooleanArray;
+
+    .line 19
+    .line 20
+    const/4 v1, 0x1
+
+    .line 21
+    iput-boolean v1, v0, Ljj2;->w:Z
+
+    .line 22
+    .line 23
+    iput-boolean v1, v0, Ljj2;->x:Z
+
+    .line 24
+    .line 25
+    iput-boolean v1, v0, Ljj2;->y:Z
+
+    .line 26
+    .line 27
+    iput-boolean v1, v0, Ljj2;->z:Z
+
+    .line 28
+    .line 29
+    iput-boolean v1, v0, Ljj2;->A:Z
+
+    .line 30
+    .line 31
+    iput-boolean v1, v0, Ljj2;->B:Z
+
+    .line 32
+    .line 33
+    iput-boolean v1, v0, Ljj2;->C:Z
+
+    .line 34
+    .line 35
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {v0}, Ljj2;->b()Lkj2;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    sput-object v0, Lkj2;->F:Lkj2;
+
+    .line 43
+    .line 44
+    const/16 v0, 0x3eb
+
+    .line 45
+    .line 46
+    const/16 v1, 0x3ec
+
+    .line 47
+    .line 48
+    const/16 v2, 0x3e8
+
+    .line 49
+    .line 50
+    const/16 v3, 0x3e9
+
+    .line 51
+    .line 52
+    const/16 v4, 0x3ea
+
+    .line 53
+    .line 54
+    invoke-static {v2, v3, v4, v0, v1}, Lv31;->x(IIIII)V
+
+    .line 55
+    .line 56
+    .line 57
+    const/16 v0, 0x3f0
+
+    .line 58
+    .line 59
+    const/16 v1, 0x3f1
+
+    .line 60
+    .line 61
+    const/16 v2, 0x3ed
+
+    .line 62
+    .line 63
+    const/16 v3, 0x3ee
+
+    .line 64
+    .line 65
+    const/16 v4, 0x3ef
+
+    .line 66
+    .line 67
+    invoke-static {v2, v3, v4, v0, v1}, Lv31;->x(IIIII)V
+
+    .line 68
+    .line 69
+    .line 70
+    const/16 v0, 0x3f5
+
+    .line 71
+    .line 72
+    const/16 v1, 0x3f6
+
+    .line 73
+    .line 74
+    const/16 v2, 0x3f2
+
+    .line 75
+    .line 76
+    const/16 v3, 0x3f3
+
+    .line 77
+    .line 78
+    const/16 v4, 0x3f4
+
+    .line 79
+    .line 80
+    invoke-static {v2, v3, v4, v0, v1}, Lv31;->x(IIIII)V
+
+    .line 81
+    .line 82
+    .line 83
+    const/16 v0, 0x3f7
+
+    .line 84
+    .line 85
+    invoke-static {v0}, Llqc;->y(I)V
+
+    .line 86
+    .line 87
+    .line 88
+    const/16 v0, 0x3f8
+
+    .line 89
+    .line 90
+    invoke-static {v0}, Llqc;->y(I)V
+
+    .line 91
+    .line 92
+    .line 93
+    const/16 v0, 0x3f9
+
+    .line 94
+    .line 95
+    invoke-static {v0}, Llqc;->y(I)V
+
+    .line 96
+    .line 97
+    .line 98
+    const/16 v0, 0x3fa
+
+    .line 99
+    .line 100
+    invoke-static {v0}, Llqc;->y(I)V
+
+    .line 101
+    .line 102
+    .line 103
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 8
+
+    .line 1
+    if-ne p0, p1, :cond_0
+
+    .line 2
+    .line 3
+    goto/16 :goto_2
+
+    .line 4
+    .line 5
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 6
+    if-eqz p1, :cond_a
+
+    .line 7
+    .line 8
+    const-class v1, Lkj2;
+
+    .line 9
+    .line 10
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v2
+
+    .line 14
+    if-eq v1, v2, :cond_1
+
+    .line 15
+    .line 16
+    goto/16 :goto_3
+
+    .line 17
+    .line 18
+    :cond_1
+    check-cast p1, Lkj2;
+
+    .line 19
+    .line 20
+    invoke-super {p0, p1}, Ln4c;->equals(Ljava/lang/Object;)Z
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v1
+
+    .line 24
+    if-eqz v1, :cond_a
+
+    .line 25
+    .line 26
+    iget-boolean v1, p0, Lkj2;->w:Z
+
+    .line 27
+    .line 28
+    iget-boolean v2, p1, Lkj2;->w:Z
+
+    .line 29
+    .line 30
+    if-ne v1, v2, :cond_a
+
+    .line 31
+    .line 32
+    iget-boolean v1, p0, Lkj2;->x:Z
+
+    .line 33
+    .line 34
+    iget-boolean v2, p1, Lkj2;->x:Z
+
+    .line 35
+    .line 36
+    if-ne v1, v2, :cond_a
+
+    .line 37
+    .line 38
+    iget-boolean v1, p0, Lkj2;->y:Z
+
+    .line 39
+    .line 40
+    iget-boolean v2, p1, Lkj2;->y:Z
+
+    .line 41
+    .line 42
+    if-ne v1, v2, :cond_a
+
+    .line 43
+    .line 44
+    iget-boolean v1, p0, Lkj2;->z:Z
+
+    .line 45
+    .line 46
+    iget-boolean v2, p1, Lkj2;->z:Z
+
+    .line 47
+    .line 48
+    if-ne v1, v2, :cond_a
+
+    .line 49
+    .line 50
+    iget-boolean v1, p0, Lkj2;->A:Z
+
+    .line 51
+    .line 52
+    iget-boolean v2, p1, Lkj2;->A:Z
+
+    .line 53
+    .line 54
+    if-ne v1, v2, :cond_a
+
+    .line 55
+    .line 56
+    iget-boolean v1, p0, Lkj2;->B:Z
+
+    .line 57
+    .line 58
+    iget-boolean v2, p1, Lkj2;->B:Z
+
+    .line 59
+    .line 60
+    if-ne v1, v2, :cond_a
+
+    .line 61
+    .line 62
+    iget-boolean v1, p0, Lkj2;->C:Z
+
+    .line 63
+    .line 64
+    iget-boolean v2, p1, Lkj2;->C:Z
+
+    .line 65
+    .line 66
+    if-ne v1, v2, :cond_a
+
+    .line 67
+    .line 68
+    iget-object v1, p0, Lkj2;->E:Landroid/util/SparseBooleanArray;
+
+    .line 69
+    .line 70
+    iget-object v2, p1, Lkj2;->E:Landroid/util/SparseBooleanArray;
+
+    .line 71
+    .line 72
+    invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->size()I
+
+    .line 73
+    .line 74
+    .line 75
+    move-result v3
+
+    .line 76
+    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
+
+    .line 77
+    .line 78
+    .line 79
+    move-result v4
+
+    .line 80
+    if-eq v4, v3, :cond_2
+
+    .line 81
+    .line 82
+    goto/16 :goto_3
+
+    .line 83
+    .line 84
+    :cond_2
+    move v4, v0
+
+    .line 85
+    :goto_0
+    if-ge v4, v3, :cond_4
+
+    .line 86
+    .line 87
+    invoke-virtual {v1, v4}, Landroid/util/SparseBooleanArray;->keyAt(I)I
+
+    .line 88
+    .line 89
+    .line 90
+    move-result v5
+
+    .line 91
+    invoke-virtual {v2, v5}, Landroid/util/SparseBooleanArray;->indexOfKey(I)I
+
+    .line 92
+    .line 93
+    .line 94
+    move-result v5
+
+    .line 95
+    if-gez v5, :cond_3
+
+    .line 96
+    .line 97
+    goto/16 :goto_3
+
+    .line 98
+    .line 99
+    :cond_3
+    add-int/lit8 v4, v4, 0x1
+
+    .line 100
+    .line 101
+    goto :goto_0
+
+    .line 102
+    :cond_4
+    iget-object p0, p0, Lkj2;->D:Landroid/util/SparseArray;
+
+    .line 103
+    .line 104
+    iget-object p1, p1, Lkj2;->D:Landroid/util/SparseArray;
+
+    .line 105
+    .line 106
+    invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
+
+    .line 107
+    .line 108
+    .line 109
+    move-result v1
+
+    .line 110
+    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
+
+    .line 111
+    .line 112
+    .line 113
+    move-result v2
+
+    .line 114
+    if-eq v2, v1, :cond_5
+
+    .line 115
+    .line 116
+    goto :goto_3
+
+    .line 117
+    :cond_5
+    move v2, v0
+
+    .line 118
+    :goto_1
+    if-ge v2, v1, :cond_9
+
+    .line 119
+    .line 120
+    invoke-virtual {p0, v2}, Landroid/util/SparseArray;->keyAt(I)I
+
+    .line 121
+    .line 122
+    .line 123
+    move-result v3
+
+    .line 124
+    invoke-virtual {p1, v3}, Landroid/util/SparseArray;->indexOfKey(I)I
+
+    .line 125
+    .line 126
+    .line 127
+    move-result v3
+
+    .line 128
+    if-ltz v3, :cond_a
+
+    .line 129
+    .line 130
+    invoke-virtual {p0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    .line 131
+    .line 132
+    .line 133
+    move-result-object v4
+
+    .line 134
+    check-cast v4, Ljava/util/Map;
+
+    .line 135
+    .line 136
+    invoke-virtual {p1, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v3
+
+    .line 140
+    check-cast v3, Ljava/util/Map;
+
+    .line 141
+    .line 142
+    invoke-interface {v4}, Ljava/util/Map;->size()I
+
+    .line 143
+    .line 144
+    .line 145
+    move-result v5
+
+    .line 146
+    invoke-interface {v3}, Ljava/util/Map;->size()I
+
+    .line 147
+    .line 148
+    .line 149
+    move-result v6
+
+    .line 150
+    if-eq v6, v5, :cond_6
+
+    .line 151
+    .line 152
+    goto :goto_3
+
+    .line 153
+    :cond_6
+    invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    .line 154
+    .line 155
+    .line 156
+    move-result-object v4
+
+    .line 157
+    invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 158
+    .line 159
+    .line 160
+    move-result-object v4
+
+    .line 161
+    :cond_7
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 162
+    .line 163
+    .line 164
+    move-result v5
+
+    .line 165
+    if-eqz v5, :cond_8
+
+    .line 166
+    .line 167
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 168
+    .line 169
+    .line 170
+    move-result-object v5
+
+    .line 171
+    check-cast v5, Ljava/util/Map$Entry;
+
+    .line 172
+    .line 173
+    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    .line 174
+    .line 175
+    .line 176
+    move-result-object v6
+
+    .line 177
+    check-cast v6, Lh4c;
+
+    .line 178
+    .line 179
+    invoke-interface {v3, v6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 180
+    .line 181
+    .line 182
+    move-result v7
+
+    .line 183
+    if-eqz v7, :cond_a
+
+    .line 184
+    .line 185
+    invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    .line 186
+    .line 187
+    .line 188
+    move-result-object v5
+
+    .line 189
+    invoke-interface {v3, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 190
+    .line 191
+    .line 192
+    move-result-object v6
+
+    .line 193
+    invoke-static {v5, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 194
+    .line 195
+    .line 196
+    move-result v5
+
+    .line 197
+    if-nez v5, :cond_7
+
+    .line 198
+    .line 199
+    goto :goto_3
+
+    .line 200
+    :cond_8
+    add-int/lit8 v2, v2, 0x1
+
+    .line 201
+    .line 202
+    goto :goto_1
+
+    .line 203
+    :cond_9
+    :goto_2
+    const/4 p0, 0x1
+
+    .line 204
+    return p0
+
+    .line 205
+    :cond_a
+    :goto_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    .line 1
+    invoke-super {p0}, Ln4c;->hashCode()I
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    const/16 v1, 0x1f
+
+    .line 6
+    .line 7
+    add-int/2addr v0, v1
+
+    .line 8
+    mul-int/2addr v0, v1
+
+    .line 9
+    iget-boolean v2, p0, Lkj2;->w:Z
+
+    .line 10
+    .line 11
+    add-int/2addr v0, v2
+
+    .line 12
+    mul-int/lit16 v0, v0, 0x3c1
+
+    .line 13
+    .line 14
+    iget-boolean v2, p0, Lkj2;->x:Z
+
+    .line 15
+    .line 16
+    add-int/2addr v0, v2
+
+    .line 17
+    mul-int/lit16 v0, v0, 0x3c1
+
+    .line 18
+    .line 19
+    iget-boolean v2, p0, Lkj2;->y:Z
+
+    .line 20
+    .line 21
+    add-int/2addr v0, v2
+
+    .line 22
+    const v2, 0x1b4d89f
+
+    .line 23
+    .line 24
+    .line 25
+    mul-int/2addr v0, v2
+
+    .line 26
+    iget-boolean v2, p0, Lkj2;->z:Z
+
+    .line 27
+    .line 28
+    add-int/2addr v0, v2
+
+    .line 29
+    mul-int/2addr v0, v1
+
+    .line 30
+    iget-boolean v2, p0, Lkj2;->A:Z
+
+    .line 31
+    .line 32
+    add-int/2addr v0, v2
+
+    .line 33
+    mul-int/2addr v0, v1
+
+    .line 34
+    iget-boolean v2, p0, Lkj2;->B:Z
+
+    .line 35
+    .line 36
+    add-int/2addr v0, v2
+
+    .line 37
+    mul-int/lit16 v0, v0, 0x3c1
+
+    .line 38
+    .line 39
+    iget-boolean p0, p0, Lkj2;->C:Z
+
+    .line 40
+    .line 41
+    add-int/2addr v0, p0
+
+    .line 42
+    mul-int/2addr v0, v1
+
+    .line 43
+    return v0
+.end method
