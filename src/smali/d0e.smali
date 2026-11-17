@@ -1,0 +1,480 @@
+.class public final Ld0e;
+.super Ljava/lang/Object;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+
+# static fields
+.field public static final d:Ld0e;
+
+
+# instance fields
+.field public final a:F
+
+.field public final b:F
+
+.field public final c:F
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 1
+    new-instance v0, Ld0e;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {v0, v1, v1, v1}, Ld0e;-><init>(FFF)V
+
+    .line 5
+    .line 6
+    .line 7
+    sput-object v0, Ld0e;->d:Ld0e;
+
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public constructor <init>(FFF)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput p1, p0, Ld0e;->a:F
+
+    .line 5
+    .line 6
+    iput p2, p0, Ld0e;->b:F
+
+    .line 7
+    .line 8
+    iput p3, p0, Ld0e;->c:F
+
+    .line 9
+    .line 10
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ld0e;)Ld0e;
+    .locals 7
+
+    .line 1
+    new-instance v0, Ld0e;
+
+    .line 2
+    .line 3
+    iget v1, p1, Ld0e;->c:F
+
+    .line 4
+    .line 5
+    iget v2, p0, Ld0e;->b:F
+
+    .line 6
+    .line 7
+    mul-float v3, v2, v1
+
+    .line 8
+    .line 9
+    iget v4, p1, Ld0e;->b:F
+
+    .line 10
+    .line 11
+    iget v5, p0, Ld0e;->c:F
+
+    .line 12
+    .line 13
+    mul-float v6, v5, v4
+
+    .line 14
+    .line 15
+    sub-float/2addr v3, v6
+
+    .line 16
+    iget p1, p1, Ld0e;->a:F
+
+    .line 17
+    .line 18
+    mul-float/2addr v5, p1
+
+    .line 19
+    iget p0, p0, Ld0e;->a:F
+
+    .line 20
+    .line 21
+    mul-float/2addr v1, p0
+
+    .line 22
+    sub-float/2addr v5, v1
+
+    .line 23
+    mul-float/2addr p0, v4
+
+    .line 24
+    mul-float/2addr v2, p1
+
+    .line 25
+    sub-float/2addr p0, v2
+
+    .line 26
+    invoke-direct {v0, v3, v5, p0}, Ld0e;-><init>(FFF)V
+
+    .line 27
+    .line 28
+    .line 29
+    return-object v0
+.end method
+
+.method public final b(Ld0e;)F
+    .locals 3
+
+    .line 1
+    iget v0, p0, Ld0e;->a:F
+
+    .line 2
+    .line 3
+    iget v1, p1, Ld0e;->a:F
+
+    .line 4
+    .line 5
+    mul-float/2addr v0, v1
+
+    .line 6
+    iget v1, p0, Ld0e;->b:F
+
+    .line 7
+    .line 8
+    iget v2, p1, Ld0e;->b:F
+
+    .line 9
+    .line 10
+    mul-float/2addr v1, v2
+
+    .line 11
+    add-float/2addr v1, v0
+
+    .line 12
+    iget p0, p0, Ld0e;->c:F
+
+    .line 13
+    .line 14
+    iget p1, p1, Ld0e;->c:F
+
+    .line 15
+    .line 16
+    mul-float/2addr p0, p1
+
+    .line 17
+    add-float/2addr p0, v1
+
+    .line 18
+    return p0
+.end method
+
+.method public final c(Ld0e;)Ld0e;
+    .locals 4
+
+    .line 1
+    new-instance v0, Ld0e;
+
+    .line 2
+    .line 3
+    iget v1, p0, Ld0e;->a:F
+
+    .line 4
+    .line 5
+    iget v2, p1, Ld0e;->a:F
+
+    .line 6
+    .line 7
+    add-float/2addr v1, v2
+
+    .line 8
+    iget v2, p0, Ld0e;->b:F
+
+    .line 9
+    .line 10
+    iget v3, p1, Ld0e;->b:F
+
+    .line 11
+    .line 12
+    add-float/2addr v2, v3
+
+    .line 13
+    iget p0, p0, Ld0e;->c:F
+
+    .line 14
+    .line 15
+    iget p1, p1, Ld0e;->c:F
+
+    .line 16
+    .line 17
+    add-float/2addr p0, p1
+
+    .line 18
+    invoke-direct {v0, v1, v2, p0}, Ld0e;-><init>(FFF)V
+
+    .line 19
+    .line 20
+    .line 21
+    return-object v0
+.end method
+
+.method public final d(F)Ld0e;
+    .locals 3
+
+    .line 1
+    new-instance v0, Ld0e;
+
+    .line 2
+    .line 3
+    iget v1, p0, Ld0e;->a:F
+
+    .line 4
+    .line 5
+    mul-float/2addr v1, p1
+
+    .line 6
+    iget v2, p0, Ld0e;->b:F
+
+    .line 7
+    .line 8
+    mul-float/2addr v2, p1
+
+    .line 9
+    iget p0, p0, Ld0e;->c:F
+
+    .line 10
+    .line 11
+    mul-float/2addr p0, p1
+
+    .line 12
+    invoke-direct {v0, v1, v2, p0}, Ld0e;-><init>(FFF)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    if-ne p0, p1, :cond_0
+
+    .line 3
+    .line 4
+    return v0
+
+    .line 5
+    :cond_0
+    instance-of v1, p1, Ld0e;
+
+    .line 6
+    .line 7
+    const/4 v2, 0x0
+
+    .line 8
+    if-nez v1, :cond_1
+
+    .line 9
+    .line 10
+    return v2
+
+    .line 11
+    :cond_1
+    check-cast p1, Ld0e;
+
+    .line 12
+    .line 13
+    iget v1, p0, Ld0e;->a:F
+
+    .line 14
+    .line 15
+    iget v3, p1, Ld0e;->a:F
+
+    .line 16
+    .line 17
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v1
+
+    .line 21
+    if-eqz v1, :cond_2
+
+    .line 22
+    .line 23
+    return v2
+
+    .line 24
+    :cond_2
+    iget v1, p0, Ld0e;->b:F
+
+    .line 25
+    .line 26
+    iget v3, p1, Ld0e;->b:F
+
+    .line 27
+    .line 28
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v1
+
+    .line 32
+    if-eqz v1, :cond_3
+
+    .line 33
+    .line 34
+    return v2
+
+    .line 35
+    :cond_3
+    iget p0, p0, Ld0e;->c:F
+
+    .line 36
+    .line 37
+    iget p1, p1, Ld0e;->c:F
+
+    .line 38
+    .line 39
+    invoke-static {p0, p1}, Ljava/lang/Float;->compare(FF)I
+
+    .line 40
+    .line 41
+    .line 42
+    move-result p0
+
+    .line 43
+    if-eqz p0, :cond_4
+
+    .line 44
+    .line 45
+    return v2
+
+    .line 46
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    .line 1
+    iget v0, p0, Ld0e;->a:F
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    const/16 v1, 0x1f
+
+    .line 8
+    .line 9
+    mul-int/2addr v0, v1
+
+    .line 10
+    iget v2, p0, Ld0e;->b:F
+
+    .line 11
+    .line 12
+    invoke-static {v2, v0, v1}, Lly6;->b(FII)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    iget p0, p0, Ld0e;->c:F
+
+    .line 17
+    .line 18
+    invoke-static {p0}, Ljava/lang/Float;->hashCode(F)I
+
+    .line 19
+    .line 20
+    .line 21
+    move-result p0
+
+    .line 22
+    add-int/2addr p0, v0
+
+    .line 23
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    .line 1
+    const-string v0, ", y="
+
+    .line 2
+    .line 3
+    const-string v1, ", z="
+
+    .line 4
+    .line 5
+    const-string v2, "V3(x="
+
+    .line 6
+    .line 7
+    iget v3, p0, Ld0e;->a:F
+
+    .line 8
+    .line 9
+    iget v4, p0, Ld0e;->b:F
+
+    .line 10
+    .line 11
+    invoke-static {v2, v3, v0, v4, v1}, Lly6;->o(Ljava/lang/String;FLjava/lang/String;FLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    const-string v1, ")"
+
+    .line 16
+    .line 17
+    iget p0, p0, Ld0e;->c:F
+
+    .line 18
+    .line 19
+    invoke-static {v0, p0, v1}, Lfz;->l(Ljava/lang/StringBuilder;FLjava/lang/String;)Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object p0
+
+    .line 23
+    return-object p0
+.end method
