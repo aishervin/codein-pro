@@ -1,0 +1,105 @@
+.class public final Lr93;
+.super Ljava/lang/Object;
+.source "r8-map-id-ebc7772f14abd8b57b838d360b1bfb747b78d1f2dce65c3b2b58039497ecc7c0"
+
+# interfaces
+.implements Liz3;
+
+
+# instance fields
+.field public final synthetic X:B
+
+.field public synthetic Y:[Z
+
+
+# direct methods
+.method public synthetic constructor <init>(B)V
+    .locals 0
+
+    .line 1
+    iput-byte p1, p0, Lr93;->X:B
+
+    .line 2
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final k(Ljava/lang/Object;Lb82;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    iget-byte p2, p0, Lr93;->X:B
+
+    .line 2
+    .line 3
+    sget-object v0, Lvmc;->a:Lvmc;
+
+    .line 4
+    .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    packed-switch p2, :pswitch_data_0
+
+    .line 7
+    .line 8
+    .line 9
+    check-cast p1, Ljava/lang/Boolean;
+
+    .line 10
+    .line 11
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result p1
+
+    .line 15
+    iget-object p0, p0, Lr93;->Y:[Z
+
+    .line 16
+    .line 17
+    aput-boolean p1, p0, v1
+
+    .line 18
+    .line 19
+    return-object v0
+
+    .line 20
+    :pswitch_0
+    check-cast p1, Ljava/lang/Boolean;
+
+    .line 21
+    .line 22
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result p1
+
+    .line 26
+    iget-object p0, p0, Lr93;->Y:[Z
+
+    .line 27
+    .line 28
+    aput-boolean p1, p0, v1
+
+    .line 29
+    .line 30
+    return-object v0
+
+    .line 31
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
